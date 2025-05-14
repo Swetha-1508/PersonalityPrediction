@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/learning_ontology.owl"
+         xmlns="http://example.org/learning_ontology.owl#">
+
+<owl:Ontology rdf:about="http://example.org/learning_ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#prefersContentType">
+  <rdfs:domain rdf:resource="#LearningStyle"/>
+  <rdfs:range rdf:resource="#ContentType"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#ContentType">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LearningStyle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Visual">
+  <rdf:type rdf:resource="#LearningStyle"/>
+  <prefersContentType rdf:resource="#VideoLectures"/>
+  <prefersContentType rdf:resource="#Infographics"/>
+  <prefersContentType rdf:resource="#Diagrams"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#VideoLectures">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Infographics">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Diagrams">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Auditory">
+  <rdf:type rdf:resource="#LearningStyle"/>
+  <prefersContentType rdf:resource="#Podcasts"/>
+  <prefersContentType rdf:resource="#AudioLectures"/>
+  <prefersContentType rdf:resource="#DiscussionGroups"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Podcasts">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AudioLectures">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DiscussionGroups">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kinesthetic">
+  <rdf:type rdf:resource="#LearningStyle"/>
+  <prefersContentType rdf:resource="#InteractiveLabs"/>
+  <prefersContentType rdf:resource="#Simulations"/>
+  <prefersContentType rdf:resource="#HandsOnActivities"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#InteractiveLabs">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Simulations">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HandsOnActivities">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ReadingWriting">
+  <rdf:type rdf:resource="#LearningStyle"/>
+  <prefersContentType rdf:resource="#Textbooks"/>
+  <prefersContentType rdf:resource="#Articles"/>
+  <prefersContentType rdf:resource="#WritingAssignments"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Textbooks">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Articles">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#WritingAssignments">
+  <rdf:type rdf:resource="#ContentType"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
